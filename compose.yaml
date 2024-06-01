@@ -1,0 +1,14 @@
+name: taxi-system
+
+services:
+  postgis:
+    image: postgis/postgis
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgis-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=P@ssw0rd
+
+volumes:
+  postgis-data:
